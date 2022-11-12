@@ -11,7 +11,7 @@ public class FindAndCallSampleScript : MonoBehaviour
     [ContextMenu("Запустить все скрипты")]
     public void FindAllScriptsAndUse() 
     {
-        Debug.Log(GetComponents<AbstractSampleScript>());
+        //Debug.Log(GetComponents<AbstractSampleScript>());
         mem = GetComponents<AbstractSampleScript>();
         foreach(AbstractSampleScript i in mem) 
         {

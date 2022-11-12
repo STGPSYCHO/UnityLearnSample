@@ -11,9 +11,9 @@ public class ObstacleItem : MonoBehaviour
 
     [Range(0f, 1f)]
     public float currentValue;
-    private static float damage = 0.2f;
+    private static float damage = 0.005f;
 
-    [SerializeField]
+    //[SerializeField]
     private UnityEvent onDestroyObstacle;
 
     [SerializeField]
@@ -22,7 +22,7 @@ public class ObstacleItem : MonoBehaviour
     {
         currentValue -= damage;
         StartCoroutine(PressCorroutine(changeSpeed));
-        Debug.Log("Значение жизей: " + currentValue);
+        //Debug.Log("Значение жизей: " + currentValue);
 
 
     }
@@ -46,16 +46,17 @@ public class ObstacleItem : MonoBehaviour
             {
                 transform.GetComponent<Renderer>().material.color = Color.Lerp(currentColor, new Color32(255, 57, 57, 255), t);
             }
-            else if(currentValue <= 0.0001f)
+            else if(currentValue <= 0.01f)
             {
                 onDestroyObstacle.Invoke();
-                Debug.Log("Мы зашли в убийство!!!!");
+                //Debug.Log("Мы зашли в убийство!!!!");
             }
             yield return null;
         }
     }
     void Start()
     {
+        onDestroyObstacle = new UnityEvent();
         onDestroyObstacle.AddListener(() => Destroy(gameObject, 1));
     }
 }

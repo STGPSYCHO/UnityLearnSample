@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 5979659563509916440}
   - component: {fileID: 5979659563509916441}
   - component: {fileID: 5979659563509916446}
+  - component: {fileID: 873786869410133158}
+  - component: {fileID: 5753946923527195449}
   m_Layer: 0
   m_Name: Table's up
   m_TagString: Untagged
@@ -62,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1c3d5150e1c2c454c96da990f094d0af, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -97,6 +99,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.1, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &873786869410133158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5979659563509916444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48cfda8ba1d4c6448993138e1afb901b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentValue: 1
+--- !u!114 &5753946923527195449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5979659563509916444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 439f1a74978eb8f41bf413412f7c2457, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  next: {fileID: 0}
 --- !u!1 &5979659563899540969
 GameObject:
   m_ObjectHideFlags: 0
