@@ -23,7 +23,7 @@ public class InteractiveRayCast : MonoBehaviour//, IPointerClickHandler
                     {
                         Instantiate(obj, raycastHit.point+ raycastHit.normal/2, new Quaternion());
                     }
-                    if (raycastHit.transform.TryGetComponent<InteractiveBoxItem>(out InteractiveBoxItem boxItem))
+                    else if (raycastHit.transform.TryGetComponent<InteractiveBoxItem>(out InteractiveBoxItem boxItem))
                     {
                         if(thisBox == null)
                         {

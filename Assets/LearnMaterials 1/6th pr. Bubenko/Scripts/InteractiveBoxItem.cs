@@ -26,10 +26,10 @@ public class InteractiveBoxItem : MonoBehaviour
         {
             if (Physics.Linecast(transform.position, next.transform.position, out RaycastHit hitbox, obstacleLayerMask))
             {
-                Debug.Log("mem");
+               // Debug.Log("mem");
                 if(hitbox.transform.TryGetComponent<ObstacleItem>(out ObstacleItem obstacleItem))
                 {
-                    obstacleItem.GetDamage();
+                    obstacleItem.GetDamage(Time.deltaTime);
                 }
             }
 
